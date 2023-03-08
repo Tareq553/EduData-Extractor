@@ -39,15 +39,6 @@ class CourseLinkScraper(scrapy.Spider):
         items = CourselinkItem()
         for all in response.css("article.course-card"):
             link = all.css("h2.course-card-title>a::attr(href)").get()
-            # id = int(all.css("h2.course-card-title>a::attr(href)").get().split("/")[3].replace("#", ""))
-            # try:
-            #     s = int(
-            #         all.css(".students-icon ::text").get().replace(",", "").replace("enquiries", "").replace("students",
-            #                                                                                                  "").strip())
-            # except:
-            #     s = 0
             yield {
                 'courseLink': link
-                # 'courseId': id,
-                # 'unitSold': s
             }
