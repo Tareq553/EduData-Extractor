@@ -92,16 +92,6 @@ class CourseInfoScraper(scrapy.Spider):
         except:
             item["unitSold"] = 0
 
-
-        # Check if the course was sold or enquired
-        try:
-            item["soldOrEnq"] = 2 if (response.css('button#addToBasket>span') or response.css(
-                'button#addToBasket')) and (response.css('button#enquireNow>span') or response.css('button#enquireNow')) \
-                else 0 if (response.css('button#enquireNow>span')) or (response.css('button#enquireNow>')) \
-                else 1
-        except:
-            item["soldOrEnq"] = 1
-
         # Scrape savings
         try:
             item["savingsPercent"] = int(

@@ -10,7 +10,6 @@ class CourseinfoItem(scrapy.Item):
 	offerPrice = scrapy.Field()
 	originalPrice = scrapy.Field()
 	unitSold = scrapy.Field()
-	soldOrEnq = scrapy.Field()
 	courseLink = scrapy.Field()
 	haveCpd = scrapy.Field()
 	cpdPoint = scrapy.Field()
