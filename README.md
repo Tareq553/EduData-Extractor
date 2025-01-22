@@ -42,7 +42,7 @@ In the journey of becoming a proficient data analyst, acquiring the ability to c
       scrapy crawl courseInfo
     ``` 
 ## Extracted Data information
-Extracted CSV will have total 22 columns.Those are:
+Extracted CSV will have total 22 columns. These are:
 
 `date`, `courseId`, `courseTitle`, `courseLink`, `subtitle`, `courseProvider`, `offerPrice`, `originalPrice`, `unitSold`
 `category`, `haveCpd`, `cpdPoint`, `awardingBody`, `qualName`, `isRegulated`, `hasProfCert`, `savingsPercent`, `broadCategory1`, `broadCategory2`
