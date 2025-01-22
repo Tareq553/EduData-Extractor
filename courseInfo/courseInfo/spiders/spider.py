@@ -9,19 +9,17 @@ import numpy as np
 class CourseInfoScraper(scrapy.Spider):
     name = "infoScraper"
 
-    # Read in course link file
-    today = pd.to_datetime("today").strftime("%d_%b_%y")
-    linkDf = pd.read_csv(f"{today}_any_courseLink.csv")
+    # Ensure the courseLink column contains absolute URLs by prepending the base URL
+	linkDf['courseLink'] = linkDf['courseLink'].astype(str)
 
-    # Make absolute links. This part keeps the unique course links only
-    linkDf.courseLink = "https://www.reed.co.uk" + linkDf.courseLink
-    linkDf = linkDf.squeeze()  # Dataframe into series
-    splitTempSeries = linkDf.astype("str").str.split("/", expand=True)
-    splitTempSeries.columns = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
-    duplicatesDropped = splitTempSeries.drop_duplicates("f", keep="first").reset_index(drop=True)
-    courseLink = duplicatesDropped.apply(lambda x: "/".join(x.values.astype("str")),
-                                         axis=1)  # This returns a series of course links
-    start_urls = courseLink.tolist()  # Scrape by chunks to run 2 spiders parallely
+	# Extract the course identifier (assuming it's always the 5th part of the URL)
+	linkDf['courseId'] = linkDf['courseLink'].str.split('/').str[5]
+
+	# Drop duplicates based on the courseId column
+	linkDf = linkDf.drop_duplicates(subset='courseId', keep='first').reset_index(drop=True)
+
+	# Convert course links back into a list
+	start_urls = linkDf['courseLink'].tolist()
 
     def parse(self, response):
         item = CourseinfoItem()
