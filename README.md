@@ -19,51 +19,34 @@ In the journey of becoming a proficient data analyst, acquiring the ability to c
 
 ## Folder Structure and Instructions
 - **courseLink**(This folder will generate course link)
-To generate course link, Go inside to courseLink folder, open cmd(In windows) and follow these commands
+  
+    To generate course link, Go to courseLink folder, open cmd(In windows) and follow these commands
 
-```bash
-  cd [scrapy.cfg file path]
-```
-```bash
-  scrapy crawl courseLink
-``` 
-We need to move generated CSV file into courseInfo folder.
+    ```bash
+      cd [scrapy.cfg file path]
+    ```
+    ```bash
+      scrapy crawl courseLink
+    ``` 
+    We need to move generated CSV file into courseInfo folder.
 
 
-**courseInfo**(This folder will generate course info)
+- **courseInfo**(This folder will generate course info)
 
-To generate course Info, Go inside to courseInfo folder and follow these commands
-
-```bash
-  cd [scrapy.cfg file path]
-```
-```bash
-  scrapy crawl courseInfo
-``` 
+    To generate course Info, Go to courseInfo folder, open cmd(In windows) and follow these commands
+    
+    ```bash
+      cd [scrapy.cfg file path]
+    ```
+    ```bash
+      scrapy crawl courseInfo
+    ``` 
 ## Extracted Data information
 Extracted CSV will have total 22 columns.Those are:
-- date	
-- courseId	
-- courseTitle	
-- courseLink	
-- subtitle
-- courseProvider
-- offerPrice	
-- originalPrice	
-- unitSold	
-- category	
-- haveCpd	
-- cpdPoint	
-- awardingBody	
-- qualName	
-- isRegulated	
-- hasProfCert	
-- savingsPercent	
-- broadCategory1	
-- broadCategory2	
-- subCategory1	
-- subCategory2	
-- OnDemand
+
+`date`, `courseId`, `courseTitle`, `courseLink`, `subtitle`, `courseProvider`, `offerPrice`, `originalPrice`, `unitSold`
+`category`, `haveCpd`, `cpdPoint`, `awardingBody`, `qualName`, `isRegulated`, `hasProfCert`, `savingsPercent`, `broadCategory1`, `broadCategory2`
+`subCategory1`, `subCategory2`, `OnDemand`.
 
 ## Data Sample
 ![ALT](https://github.com/Tareq553/Scraping-Project-3/blob/main/courseInfo/Data_sample.png)
