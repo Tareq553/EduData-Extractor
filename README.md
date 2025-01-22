@@ -52,7 +52,8 @@ Extracted CSV will have total 22 columns. These are:
 ![ALT](https://github.com/Tareq553/Scraping-Project-3/blob/main/courseInfo/Data_sample.png)
 
 
-
+## License
+This project is open-source and available under the **MIT** License.
 
 ## Author
 
