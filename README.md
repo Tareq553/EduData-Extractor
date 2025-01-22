@@ -1,31 +1,25 @@
 
-# Scraping Project-3
+# EduData Extractor
+
+## Project Overview
+This web scraping project utilizes Python and the Scrapy framework to extract detailed information about courses offered on Reed.co.uk, a prominent platform for online courses and job listings. The project aims to automate the extraction of course details, which are then saved in a structured CSV format. This dataset can be utilized for further analysis, such as identifying trends in course pricing, popularity, and certification options across various categories.
+
+The project demonstrates how data analysts can leverage web scraping to collect structured data for analysis and decision-making. By implementing this solution, users gain insights into various courses, providers, and certifications, aiding them in understanding market trends and making informed decisions.
 
 ## Motivation of this project
-Aspiring data analysts need to have a strong understanding of how to collect and clean data in order to perform meaningful analysis. Web scraping is an essential skill for any data analyst, as it allows for the collection of large amounts of data from websites that can be used for further analysis.
+In the journey of becoming a proficient data analyst, acquiring the ability to collect and clean data is crucial for meaningful analysis. Web scraping is a vital skill that enables analysts to gather large datasets from online sources, paving the way for insightful analysis. This project focuses on leveraging web scraping techniques to extract structured data, providing a practical learning experience for aspiring data analysts.
 
-## Technologies used
-- Python 3.8.5
-- Scrapy 2.4.1
-- Pandas 1.2.3
-- Beautiful Soup 4.9.3
+## Technologies Used
+- **Programming Language**: Python
+- **Platform**: Jupyter Notebook
+- **Libraries**:
+  - Pandas, NumPy
+  - Scrapy
+  - Beautiful Soup
 
-## Project Details
-
-It's a Web Scraping Project using Python and [Scrapy](https://docs.scrapy.org/en/latest/), a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages. The goal of the project is to extract courses information from [Reed](https://www.reed.co.uk/), a popular job and online course provider site and save it to a CSV file for further analysis.
-
-
-## Folder information
-- courseInfo
-- courseLink
-
-
-**courseLink**(This folder will generate course link)
-
-
-
-
-To generate course link, Go inside to courseLink folder and follow these commands
+## Folder Structure and Instructions
+- **courseLink**(This folder will generate course link)
+To generate course link, Go inside to courseLink folder, open cmd(In windows) and follow these commands
 
 ```bash
   cd [scrapy.cfg file path]
